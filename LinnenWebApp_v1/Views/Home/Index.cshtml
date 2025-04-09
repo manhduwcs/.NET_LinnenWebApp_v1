@@ -1,0 +1,52 @@
+﻿@using LinnenWebApp_v1.Controllers
+
+@{
+    var studentList = ViewData["studentList"] as string[];
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    int count = 0;
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @{
+        if(TempData["loginMessage"] != null){
+            <strong class="text-success text-lg">@TempData["loginMessage"]</strong> 
+        }
+        if(UserController.loggedInUser.UserID != -1){
+            <strong class="text-success text-lg">User [@UserController.loggedInUser.Username] is currently logged in.</strong> 
+        }
+    }
+    @* <table border="1" width="100%">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Student Name</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        {
+                <tr>
+                    <td>@count</td>
+                    <td>@studentList</td>
+                </tr>
+                count++;
+            }
+
+        </tbody>
+    </table> *@
+
+    @* @using(Html.BeginForm("SubmitStudent", "Home", FormMethod.Post)){
+        <div class="text-container">
+            <label for="studentName">Student Name : </label>
+            <input type="text" name="studentName" required> 
+            <input type="submit" value="Add Student">
+        </div>
+    } *@
+
+    @* <h3>Student Name Submitted is : @TempData["studentName"]</h3> *@
+</div>

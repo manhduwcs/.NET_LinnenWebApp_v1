@@ -1,0 +1,38 @@
+@model List<LinnenWebApp_v1.Models.Student>
+
+<h2>--- Student List ---</h2>
+
+<!-- Action link in the header -->
+
+<form asp-action="SubmitStudent" method="post">
+    <div>
+        @Html.LabelFor(model => model[0].Name, "Student Name") 
+        <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+        @Html.LabelFor(model => model[0].Age, "Student Age") 
+        <input type="number" id="age" name="age" required />
+    </div>
+    <div>
+        <input type="submit" id="submit-button" value="Add This Student!" />
+    </div>
+</form>
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <th style="width: 60%;">@Html.DisplayNameFor(model => model[0].Name)</th>
+            <th style="width: 40%;">@Html.DisplayNameFor(model => model[0].Age)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@Html.ActionLink("Edit", "ShowEditStudentPage", "Student", new { studentID = student.StudentID})</td>
+            </tr>
+        }
+    </tbody>
+</table>

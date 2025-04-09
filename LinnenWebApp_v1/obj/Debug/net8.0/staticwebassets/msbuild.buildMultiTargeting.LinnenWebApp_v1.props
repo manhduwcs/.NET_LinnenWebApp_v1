@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LinnenWebApp_v1.props" />
+</Project>

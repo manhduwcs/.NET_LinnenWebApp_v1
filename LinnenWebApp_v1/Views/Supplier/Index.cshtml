@@ -1,0 +1,85 @@
+﻿@model IEnumerable<LinnenWebApp_v1.Models.Supplier>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Suppliers List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .table {
+            width: 100%; /* Set table width to 100% */
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        /* Adjust column widths */
+        th:nth-child(1), td:nth-child(1) { width: 8%; }  /* SupplierID */
+        th:nth-child(2), td:nth-child(2) { width: 20%; } /* CompanyName */
+        th:nth-child(3), td:nth-child(3) { width: 15%; } /* ContactName */
+        th:nth-child(4), td:nth-child(4) { width: 15%; } /* ContactTitle */
+        th:nth-child(5), td:nth-child(5) { width: 15%; } /* Address */
+        th:nth-child(6), td:nth-child(6) { width: 10%; } /* City */
+        th:nth-child(7), td:nth-child(7) { width: 8%; }  /* Region */
+        th:nth-child(8), td:nth-child(8) { width: 10%; } /* PostalCode */
+        th:nth-child(9), td:nth-child(9) { width: 10%; } /* Country */
+        th:nth-child(10), td:nth-child(10) { width: 10%; } /* Phone */
+        th:nth-child(11), td:nth-child(11) { width: 10%; } /* Fax */
+        th:nth-child(12), td:nth-child(12) { width: 15%; } /* HomePage */
+        th:nth-child(13), td:nth-child(13) { width: 15%; } /* Actions */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Suppliers</h2>
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Create New</a>
+        </p>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().SupplierID)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().CompanyName)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().ContactName)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().ContactTitle)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Address)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().City)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Region)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().PostalCode)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Country)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Phone)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Fax)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().HomePage)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.SupplierID)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CompanyName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ContactName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ContactTitle)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                        <td>@Html.DisplayFor(modelItem => item.City)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Region)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PostalCode)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Country)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Fax)</td>
+                        <td>@Html.DisplayFor(modelItem => item.HomePage)</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.SupplierID }, new { @class = "btn btn-warning btn-sm" }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.SupplierID }, new { @class = "btn btn-info btn-sm" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.SupplierID }, new { @class = "btn btn-danger btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

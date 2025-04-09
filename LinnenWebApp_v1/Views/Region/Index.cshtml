@@ -1,0 +1,31 @@
+@model List<LinnenWebApp_v1.Models.Region>
+
+@{
+    ViewBag.Title = "Regions";
+}
+
+<h2>Regions</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th class="text-center">Region ID</th>
+            <th class="text-center">Region Description</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var region in Model)
+        {
+            <tr>
+                <td class="text-center">@region.RegionID</td>
+                <td class="text-center">@region.RegionDescription</td>
+                <td class="text-center">
+                    @Html.ActionLink("Details", "Details", "Region", new { id = region.RegionID }, new { @class = "btn btn-info text-white" }) 
+                    @Html.ActionLink("Edit", "Edit", "Region", new { id = region.RegionID }, new { @class = "btn btn-warning text-white" }) 
+                    @Html.ActionLink("Delete", "Delete", "Region", new { id = region.RegionID }, new { @class = "btn btn-danger text-white" }) 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

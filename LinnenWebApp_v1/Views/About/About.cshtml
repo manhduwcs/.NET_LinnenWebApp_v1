@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "About Page";
+}
+
+
+<div class="text-container">
+    @Html.Partial("Header")
+    <h1>This is an About Page</h1>
+    <p>Your name = @ViewData["name"]</p>
+    <p>Short name = @TempData["shortName"]</p>
+    <p>Current time is : @ViewData["currentTime"]</p>
+    
+</div>

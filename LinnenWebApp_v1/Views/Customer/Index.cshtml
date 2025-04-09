@@ -1,0 +1,106 @@
+﻿@model List<LinnenWebApp_v1.Models.Customer>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customers List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .table {
+            width: auto; /* Allow table to resize */
+            table-layout: auto; /* Allow the table to adjust based on content */
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        /* Adjust column widths using percentages */
+        .customer-id {
+            width: 8%; /* 8% */
+        }
+        .company-name {
+            width: 20%; /* 20% */
+        }
+        .contact-name {
+            width: 15%; /* 15% */
+        }
+        .contact-title {
+            width: 10%; /* 10% */
+        }
+        .address {
+            width: 20%; /* 20% */
+        }
+        .city {
+            width: 10%; /* 10% */
+        }
+        .region {
+            width: 5%; /* 5% */
+        }
+        .postal-code {
+            width: 5%; /* 5% */
+        }
+        .country {
+            width: 5%; /* 5% */
+        }
+        .phone {
+            width: 5%; /* 5% */
+        }
+        .fax {
+            width: 5%; /* 5% */
+        }
+        .actions {
+            width: 7%; /* 7% */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Customers</h2>
+        <a asp-action="Create" class="btn btn-primary mb-3">Create New Customer</a>
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th class="customer-id">Customer ID</th>
+                    <th class="company-name">Company Name</th>
+                    <th class="contact-name">Contact Name</th>
+                    <th class="contact-title">Contact Title</th>
+                    <th class="address">Address</th>
+                    <th class="city">City</th>
+                    <th class="region">Region</th>
+                    <th class="postal-code">Postal Code</th>
+                    <th class="country">Country</th>
+                    <th class="phone">Phone</th>
+                    <th class="fax">Fax</th>
+                    <th class="actions">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td class="customer-id">@customer.CustomerID</td>
+                        <td class="company-name">@customer.CompanyName</td>
+                        <td class="contact-name">@customer.ContactName</td>
+                        <td class="contact-title">@customer.ContactTitle</td>
+                        <td class="address">@customer.Address</td>
+                        <td class="city">@customer.City</td>
+                        <td class="region">@customer.Region</td>
+                        <td class="postal-code">@customer.PostalCode</td>
+                        <td class="country">@customer.Country</td>
+                        <td class="phone">@customer.Phone</td>
+                        <td class="fax">@customer.Fax</td>
+                        <td class="actions">
+                            @Html.ActionLink("Details", "Details", new { id = customer.CustomerID }, new { @class = "btn btn-info btn-sm" }) |
+                            @Html.ActionLink("Edit", "Edit", new { id = customer.CustomerID }, new { @class = "btn btn-warning btn-sm" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = customer.CustomerID }, new { @class = "btn btn-danger btn-sm" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

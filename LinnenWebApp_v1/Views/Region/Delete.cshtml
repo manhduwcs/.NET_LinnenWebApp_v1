@@ -1,0 +1,47 @@
+﻿@model LinnenWebApp_v1.Models.Region
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Region</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h3 class="text-danger">Are you sure you want to delete this?</h3>
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Region Details</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.RegionID)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.RegionID)
+                    </dd>
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.RegionDescription)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.RegionDescription)
+                    </dd>
+                </dl>
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="RegionID" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

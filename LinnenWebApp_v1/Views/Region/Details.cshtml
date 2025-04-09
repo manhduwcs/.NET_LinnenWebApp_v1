@@ -1,0 +1,41 @@
+﻿@model LinnenWebApp_v1.Models.Region
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container mt-5">
+    <h4 class="mb-4">Region Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3 font-weight-bold">
+            @Html.DisplayNameFor(model => model.RegionID)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.RegionID)
+        </dd>
+        <dt class="col-sm-3 font-weight-bold">
+            @Html.DisplayNameFor(model => model.RegionDescription)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.RegionDescription)
+        </dd>
+    </dl>
+    <div class="mt-4">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.RegionID }, new { @class = "btn btn-warning" }) 
+        <a href="@Url.Action("Index", "Region")" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+
+</body>
+</html>

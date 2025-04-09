@@ -1,0 +1,36 @@
+@model IEnumerable<LinnenWebApp_v1.Models.Territory>
+
+@{
+    ViewData["Title"] = "Territories";
+}
+
+<h1>Territories</h1>
+
+<table class="table table-striped">
+    <a asp-action="Create" class="btn btn-success">Create New Territory</a>
+    <thead>
+        <tr>
+            <th>Territory ID</th>
+            <th>Territory Description</th>
+            <th>Region ID</th>
+            <th>Region Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var territory in Model)
+        {
+            <tr>
+                <td>@territory.TerritoryID</td>
+                <td>@territory.TerritoryDescription</td>
+                <td>@territory.RegionID</td>
+                <td>@territory.RegionDescription</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@territory.TerritoryID" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@territory.TerritoryID" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@territory.TerritoryID" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

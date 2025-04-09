@@ -1,0 +1,17 @@
+﻿@model LinnenWebApp_v1.Models.Student
+
+<h2>Edit Student</h2>
+
+<form asp-action="EditStudent" method="post">
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { required = "required" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age, new { required = "required", type = "number" })
+    </div>
+    <div>
+        <input type="submit" value="Update Student" />
+    </div>
+</form>

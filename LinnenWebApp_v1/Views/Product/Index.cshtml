@@ -1,0 +1,38 @@
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container mt-4">
+    <h1>Products</h1>
+    <a class="btn btn-primary mb-3" asp-action="Create">Create New</a>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Supplier</th>
+                <th>Category</th>
+                <th>Unit Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.CompanyName</td>
+                    <td>@item.CategoryName</td>
+                    <td>@item.UnitPrice</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.ProductID">Details</a>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.ProductID">Edit</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.ProductID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,42 @@
+@model LinnenWebApp_v1.Models.Territory
+
+@{
+    ViewData["Title"] = "Edit Territory";
+    List<string> regionChoices = new List<string>();
+    string chosenChoice = Model.RegionDescription;
+    if (TempData["RegionChoices"] != null)
+    {
+        regionChoices = TempData["RegionChoices"] as List<string>;
+        regionChoices.Remove(chosenChoice);
+    }
+}
+
+<h1>Edit Territory</h1>
+
+<form asp-action="Edit">
+    <div class="mb-3">
+        <label asp-for="TerritoryID" class="form-label">Territory ID</label>
+        <input asp-for="TerritoryID" class="form-control" />
+        <span asp-validation-for="TerritoryID" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TerritoryDescription" class="form-label">Territory Description</label>
+        <input asp-for="TerritoryDescription" class="form-control" />
+        <span asp-validation-for="TerritoryDescription" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="regionSelect" class="form-label">Select a Region</label>
+        @* "name" attribute can replace asp-for *@
+        <select name="RegionDescription" class="form-select">
+            <option selected value="@chosenChoice">@chosenChoice</option>
+            @foreach (var choice in regionChoices)
+            {
+                <option value="@choice">@choice</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

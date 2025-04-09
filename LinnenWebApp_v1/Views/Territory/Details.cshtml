@@ -1,0 +1,27 @@
+@model LinnenWebApp_v1.Models.Territory
+
+@{
+    ViewData["Title"] = "Territory Details";
+}
+
+<h1>Territory Details</h1>
+
+<div>
+    <h4>Territory</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Territory ID</dt>
+        <dd class="col-sm-10">@Model.TerritoryID</dd>
+
+        <dt class="col-sm-2">Territory Description</dt>
+        <dd class="col-sm-10">@Model.TerritoryDescription</dd>
+
+        <dt class="col-sm-2">Region ID</dt>
+        <dd class="col-sm-10">@Model.RegionID</dd>
+
+        <dt class="col-sm-2">Region Description</dt>
+        <dd class="col-sm-10">@Model.RegionDescription</dd>
+    </dl>
+</div>
+
+<a asp-action="Index" class="btn btn-primary">Back to List</a>

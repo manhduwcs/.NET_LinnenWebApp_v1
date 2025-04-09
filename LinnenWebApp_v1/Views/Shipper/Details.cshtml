@@ -1,0 +1,47 @@
+﻿@model LinnenWebApp_v1.Models.Shipper
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container mt-5">
+    <h4>Shipper Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Shipper ID
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ShipperID)
+        </dd>
+        <dt class="col-sm-2">
+            Company Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            Phone
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+    </dl>
+    <div>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ShipperID }, new { @class = "btn btn-warning" }) |
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
