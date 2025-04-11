@@ -15,5 +15,21 @@
         public string Fax { get; set; }
         public string HomePage { get; set; }
 
+        public Supplier()
+        {
+            SupplierID = -1;
+            CompanyName = "";
+            ContactName = "";
+            ContactTitle = "";
+            Address = "";
+            City = "";
+            Region = "";
+            PostalCode = "";
+            Country = "";
+            Phone = "";
+            Fax = "";
+            HomePage = "";
+        }
+
     }
 }

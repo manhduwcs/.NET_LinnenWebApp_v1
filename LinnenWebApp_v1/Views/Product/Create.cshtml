@@ -2,28 +2,51 @@
 
 @{
     ViewData["Title"] = "Create Product";
+    Layout = "_Layout";
 }
 
 <div class="container mt-4">
     <h1>Create Product</h1>
 
     <form asp-action="Create">
+                <input type="hidden" asp-for="ProductID" />
         <div class="mb-3">
-            <label asp-for="ProductName" class="form-label"></label>
+            <label asp-for="ProductName" class="form-label">Product Name</label>
             <input asp-for="ProductName" class="form-control" />
         </div>
         <div class="mb-3">
-            <label asp-for="SupplierID" class="form-label"></label>
+            <label asp-for="SupplierID" class="form-label">Supplier's CompanyName</label>
             <select asp-for="SupplierID" class="form-select" asp-items="@(new SelectList(ViewBag.Suppliers, "SupplierID", "CompanyName"))"></select>
         </div>
         <div class="mb-3">
-            <label asp-for="CategoryID" class="form-label"></label>
+            <label asp-for="CategoryID" class="form-label">Category's CategoryName</label>
             <select asp-for="CategoryID" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "CategoryID", "CategoryName"))"></select>
         </div>
         <div class="mb-3">
-            <label asp-for="UnitPrice" class="form-label"></label>
+            <label asp-for="QuantityPerUnit" class="form-label">Quantity Per Unit</label>
+            <input asp-for="QuantityPerUnit" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="UnitPrice" class="form-label">Unit Price</label>
             <input asp-for="UnitPrice" class="form-control" />
         </div>
+        <div class="mb-3">
+            <label asp-for="UnitsInStock" class="form-label">Units In Stock</label>
+            <input asp-for="UnitsInStock" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="UnitsOnOrder" class="form-label">Units On Order</label>
+            <input asp-for="UnitsOnOrder" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="ReorderLevel" class="form-label">Reorder Level</label>
+            <input asp-for="ReorderLevel" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Discontinued" class="form-label">Discontinued</label>
+            <input type="radio" asp-for="Discontinued" value="true" class="form-control" />
+        </div>
+
         <button type="submit" class="btn btn-primary">Create</button>
         <a class="btn btn-secondary" asp-action="Index">Back to List</a>
     </form>

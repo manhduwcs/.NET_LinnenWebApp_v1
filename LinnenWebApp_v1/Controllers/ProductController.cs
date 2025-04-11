@@ -32,42 +32,131 @@ public class ProductController : Controller
     // GET: Products/Create
     public IActionResult Create()
     {
+        ViewBag.Suppliers = GetSupplierChoices();
+        ViewBag.Categories = GetCategoryChoices();
         return View();
     }
 
     // POST: Products/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Create(Product product)
+    public IActionResult Create(Product product, IFormCollection form)
     {
-        if (ModelState.IsValid)
+        try
         {
-            // TODO: Insert the new product into the database
-            return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Suppliers = GetSupplierChoices();
+                ViewBag.Categories = GetCategoryChoices();
+                return View(product);
+            }
+
+            string productName = form["ProductName"];
+            int supplierID = int.Parse(form["SupplierID"]);
+            int categoryID = int.Parse(form["CategoryID"]);
+            string quantityPerUnit = form["QuantityPerUnit"];
+            decimal unitPrice = decimal.Parse(form["UnitPrice"]);
+            int unitsInStock = int.Parse(form["UnitsInStock"]);
+            int unitsOnOrder = int.Parse(form["UnitsOnOrder"]);
+            int reorderLevel = int.Parse(form["ReorderLevel"]);
+            bool discontinued = bool.TryParse(form["Discontinued"], out discontinued);
+
+            Product newProduct = new Product
+            {
+                ProductName = productName,
+                SupplierID = supplierID,
+                CategoryID = categoryID,
+                QuantityPerUnit = quantityPerUnit,
+                UnitPrice = unitPrice,
+                UnitsInStock = unitsInStock,
+                UnitsOnOrder = unitsOnOrder,
+                ReorderLevel = reorderLevel,
+                Discontinued = discontinued
+            };
+
+            if (CreateProduct(newProduct))
+            {
+                return RedirectToAction("Index");
+            }
         }
-        // TODO: Populate ViewBag for Suppliers and Categories if ModelState is invalid
+        catch (System.Exception e)
+        {
+            Console.WriteLine(e);
+        }
+        ViewBag.Suppliers = GetSupplierChoices();
+        ViewBag.Categories = GetCategoryChoices();
         return View(product);
     }
 
     // GET: Products/Edit/5
     public IActionResult Edit(int id)
     {
-        // TODO: Retrieve product by id
-        // TODO: Populate ViewBag for Suppliers and Categories
-        return View();
+        Product product = GetProductByID(id);
+        ViewBag.Suppliers = GetSupplierChoices();
+        ViewBag.Categories = GetCategoryChoices();
+        return View(product);
     }
 
     // POST: Products/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Edit(Product product)
+    public IActionResult Edit(Product product, IFormCollection form)
     {
-        if (ModelState.IsValid)
+        int prID = -1;
+        if (!int.TryParse(form["ProductID"], out prID))
         {
-            // TODO: Update the product in the database
-            return RedirectToAction(nameof(Index));
+            ModelState.AddModelError("ProductName", "There's an error with this product's ProductID !");
+            return View(product);
         }
-        // TODO: Populate ViewBag for Suppliers and Categories if ModelState is invalid
+
+        Console.WriteLine("Edit Product ID = " + prID);
+        try
+        {
+            if (!ModelState.IsValid)
+            {
+                Console.WriteLine("Run to this line : Invalid model state ");
+                ViewBag.Suppliers = GetSupplierChoices();
+                ViewBag.Categories = GetCategoryChoices();
+                return View(product);
+            }
+
+            string productName = form["ProductName"];
+            int supplierID = int.Parse(form["SupplierID"]);
+            int categoryID = int.Parse(form["CategoryID"]);
+            string quantityPerUnit = form["QuantityPerUnit"];
+            decimal unitPrice = decimal.Parse(form["UnitPrice"]);
+            int unitsInStock = int.Parse(form["UnitsInStock"]);
+            int unitsOnOrder = int.Parse(form["UnitsOnOrder"]);
+            int reorderLevel = int.Parse(form["ReorderLevel"]);
+            bool discontinued = form.ContainsKey("Discontinued");
+
+            Product newProduct = new Product
+            {
+                ProductID = prID,
+                ProductName = productName,
+                SupplierID = supplierID,
+                CategoryID = categoryID,
+                QuantityPerUnit = quantityPerUnit,
+                UnitPrice = unitPrice,
+                UnitsInStock = unitsInStock,
+                UnitsOnOrder = unitsOnOrder,
+                ReorderLevel = reorderLevel,
+                Discontinued = discontinued
+            };
+
+            if (EditProduct(newProduct))
+            {
+                Console.WriteLine("Run to this line : Edit Product ");
+                return RedirectToAction("Index");
+            }
+        }
+        catch (System.Exception e)
+        {
+            Console.WriteLine(e);
+        }
+        Console.WriteLine("Run to the error outer line ");
+        ViewBag.Suppliers = GetSupplierChoices();
+        ViewBag.Categories = GetCategoryChoices();
         return View(product);
     }
 
@@ -79,19 +168,70 @@ public class ProductController : Controller
     }
 
     // POST: Products/Delete/5
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult DeleteConfirmed(int id)
+    public IActionResult Delete(int id, IFormCollection form)
     {
         // TODO: Remove the product from the database
         return RedirectToAction(nameof(Index));
+    }
+
+    public List<Category> GetCategoryChoices()
+    {
+        List<Category> catlist = new List<Category>();
+        using (SqlConnection con = new SqlConnection(connectionString))
+        {
+            if (con.State == ConnectionState.Closed) con.Open();
+            string query = "SELECT CategoryID, CategoryName from Categories";
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Category cat = new Category
+                        {
+                            CategoryID = reader.GetInt32(reader.GetOrdinal("CategoryID")),
+                            CategoryName = reader.GetString(reader.GetOrdinal("CategoryName")),
+                        };
+                        catlist.Add(cat);
+                    }
+                }
+            }
+        }
+        return catlist;
+    }
+    public List<Supplier> GetSupplierChoices()
+    {
+        List<Supplier> supList = new List<Supplier>();
+        using (SqlConnection con = new SqlConnection(connectionString))
+        {
+            if (con.State == ConnectionState.Closed) con.Open();
+            string query = "select SupplierID, CompanyName from Suppliers";
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Supplier sup = new Supplier
+                        {
+                            SupplierID = reader.GetInt32(reader.GetOrdinal("SupplierID")),
+                            CompanyName = reader.GetString(reader.GetOrdinal("CompanyName")),
+                        };
+                        supList.Add(sup);
+                    }
+                }
+            }
+        }
+        return supList;
     }
 
     public bool CreateProduct(Product product)
     {
         try
         {
-            string query = "INSERT INTO dbo.Products (SupplierID, CategoryID, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, ReorderLevel, Discontinued) VALUES(@SupplierID, @CategoryID, @ProductName, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @ReorderLevel, @Discontinued); ";
+            string query = "INSERT INTO dbo.Products (SupplierID, CategoryID, ProductName, QuantityPerUnit, UnitPrice, UnitsInStock, UnitsOnOrder, ReorderLevel, Discontinued) VALUES(@SupplierID, @CategoryID, @ProductName, @QuantityPerUnit, @UnitPrice, @UnitsInStock, @UnitsOnOrder, @ReorderLevel, @Discontinued); ";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 if (con.State == ConnectionState.Closed) con.Open();
@@ -104,6 +244,7 @@ public class ProductController : Controller
                     cmd.Parameters.AddWithValue("@QuantityPerUnit", product.QuantityPerUnit);
                     cmd.Parameters.AddWithValue("@UnitPrice", product.UnitPrice);
                     cmd.Parameters.AddWithValue("@UnitsInStock", product.UnitsInStock);
+                    cmd.Parameters.AddWithValue("@UnitsOnOrder", product.UnitsOnOrder);
                     cmd.Parameters.AddWithValue("@ReorderLevel", product.ReorderLevel);
                     cmd.Parameters.AddWithValue("@Discontinued", product.Discontinued);
 
@@ -113,7 +254,7 @@ public class ProductController : Controller
         }
         catch (System.Exception e)
         {
-            Debug.WriteLine(e);
+            Console.WriteLine(e);
         }
         return false;
     }
@@ -122,10 +263,11 @@ public class ProductController : Controller
     {
         try
         {
-            string query = "UPDATE dbo.Products SET SupplierID = @SupplierID, CategoryID = @CategoryID, ProductName = @ProductName, QuantityPerUnit = @QuantityPerUnit, UnitPrice = @UnitPrice, UnitsInStock = @UnitsInStock, ReorderLevel = @ReorderLevel, Discontinued = @Discontinued WHERE ProductID = @ProductID;";
+            string query = "UPDATE dbo.Products SET SupplierID = @SupplierID, CategoryID = @CategoryID, ProductName = @ProductName, QuantityPerUnit = @QuantityPerUnit, UnitPrice = @UnitPrice, UnitsInStock = @UnitsInStock, UnitsOnOrder = @UnitsOnOrder, ReorderLevel = @ReorderLevel, Discontinued = @Discontinued WHERE ProductID = @ProductID;";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 if (con.State == ConnectionState.Closed) con.Open();
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@ProductID", product.ProductID);
@@ -135,16 +277,30 @@ public class ProductController : Controller
                     cmd.Parameters.AddWithValue("@QuantityPerUnit", product.QuantityPerUnit);
                     cmd.Parameters.AddWithValue("@UnitPrice", product.UnitPrice);
                     cmd.Parameters.AddWithValue("@UnitsInStock", product.UnitsInStock);
+                    cmd.Parameters.AddWithValue("@UnitsOnOrder", product.UnitsOnOrder);
                     cmd.Parameters.AddWithValue("@ReorderLevel", product.ReorderLevel);
                     cmd.Parameters.AddWithValue("@Discontinued", product.Discontinued);
 
-                    return cmd.ExecuteNonQuery() > 0;
+                    Console.WriteLine($"ProductID: {product.ProductID}");
+                    Console.WriteLine($"SupplierID: {product.SupplierID}");
+                    Console.WriteLine($"CategoryID: {product.CategoryID}");
+                    Console.WriteLine($"ProductName: {product.ProductName}");
+                    Console.WriteLine($"QuantityPerUnit: {product.QuantityPerUnit}");
+                    Console.WriteLine($"UnitPrice: {product.UnitPrice}");
+                    Console.WriteLine($"UnitsInStock: {product.UnitsInStock}");
+                    Console.WriteLine($"UnitsOnOrder: {product.UnitsOnOrder}");
+                    Console.WriteLine($"ReorderLevel: {product.ReorderLevel}");
+                    Console.WriteLine($"Discontinued: {product.Discontinued}");
+
+                    int rows = cmd.ExecuteNonQuery();
+                    Console.WriteLine("Rows Affected Update Product = "+rows);
+                    return rows > 0;
                 }
             }
         }
         catch (System.Exception e)
         {
-            Debug.WriteLine(e);
+            Console.WriteLine(e);
         }
         return false;
     }
@@ -174,6 +330,7 @@ public class ProductController : Controller
                             QuantityPerUnit = reader.IsDBNull(reader.GetOrdinal("QuantityPerUnit")) ? "" : reader.GetString(reader.GetOrdinal("QuantityPerUnit")),
                             UnitPrice = reader.GetDecimal(reader.GetOrdinal("UnitPrice")),
                             UnitsInStock = reader.GetInt16(reader.GetOrdinal("UnitsInStock")),
+                            UnitsOnOrder = reader.GetInt16(reader.GetOrdinal("UnitsOnOrder")),
                             ReorderLevel = reader.GetInt16(reader.GetOrdinal("ReorderLevel")),
                             Discontinued = reader.GetBoolean(reader.GetOrdinal("Discontinued"))
                         };
@@ -209,6 +366,7 @@ public class ProductController : Controller
                             QuantityPerUnit = reader.IsDBNull(reader.GetOrdinal("QuantityPerUnit")) ? "" : reader.GetString(reader.GetOrdinal("QuantityPerUnit")),
                             UnitPrice = reader.GetDecimal(reader.GetOrdinal("UnitPrice")),
                             UnitsInStock = reader.GetInt16(reader.GetOrdinal("UnitsInStock")),
+                            UnitsOnOrder = reader.GetInt16(reader.GetOrdinal("UnitsOnOrder")),
                             ReorderLevel = reader.GetInt16(reader.GetOrdinal("ReorderLevel")),
                             Discontinued = reader.GetBoolean(reader.GetOrdinal("Discontinued"))
                         };

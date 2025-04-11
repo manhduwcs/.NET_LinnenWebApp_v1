@@ -29,13 +29,20 @@ namespace LinnenWebApp_v1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(IFormCollection form)
+        public IActionResult Login(User user, IFormCollection form)
         {
             if (loggedInUser.UserID != -1)
             {
+                // we can use Notification for this instead of modelstate.adderr
                 ModelState.AddModelError("Username", "You must logout the current account before logging in another account !");
                 return RedirectToAction("Login");
             }
+
+            if (!ModelState.IsValid)
+            {
+                return View(user);
+            }
+
             try
             {
                 string username = form["Username"];
@@ -184,6 +191,14 @@ namespace LinnenWebApp_v1.Controllers
                     Description = collection["Description"],
                 };
 
+                // Check duplicate username
+                User current = GetUserByUsername(user.Username);
+                if (current.UserID != -1)
+                {
+                    ModelState.AddModelError("Username", "This username has already exist !");
+                    return View(user);
+                }
+
                 bool success = CreateUser(user);
                 if (success)
                 {
@@ -209,18 +224,23 @@ namespace LinnenWebApp_v1.Controllers
         // POST: UserController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(IFormCollection collection)
+        public ActionResult Edit(User user, IFormCollection collection)
         {
-            User user = new();
             try
             {
                 int id = 0;
 
+                if (!ModelState.IsValid)
+                {
+                    return View(user);
+                }
+
                 if (!int.TryParse(collection["UserID"], out id))
                 {
                     ModelState.AddModelError("", "An unexpected error happened. Try again later!");
-                    return RedirectToAction("Edit");
+                    return View(user);
                 }
+
 
                 user = new User
                 {
@@ -230,6 +250,18 @@ namespace LinnenWebApp_v1.Controllers
                     Description = collection["Description"],
                     // Skip Employee ID
                 };
+
+                // We cannot use the form's Username to check. The Form can be changed and this lead to bugs.
+                // Instead, use the data from db to check, via GetUserById
+                string currentUsername = GetUserById(id).Username;
+
+                // Check duplicate username
+                User check = GetUserByUsername(user.Username);
+                if (check.UserID != -1 && check.Username != currentUsername)
+                {
+                    ModelState.AddModelError("Username", "This username has already exist !");
+                    return View(user);
+                }
 
                 bool success = EditUser(user);
 
@@ -244,8 +276,7 @@ namespace LinnenWebApp_v1.Controllers
                 Debug.WriteLine(e);
             }
 
-            ModelState.AddModelError("Username", "An unexpected error happened. Try again later!");
-            return RedirectToAction("Edit");
+            return View(user);
         }
         // GET: UserController/Delete/5
         public ActionResult Delete(int id)

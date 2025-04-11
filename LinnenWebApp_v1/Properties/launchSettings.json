@@ -18,6 +18,20 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
+    "LiveReloadNetCore": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "applicationUrl": "http://localhost:5000",
+    "Watch": {
+      "commandName": "Executable",
+      "executablePath": "dotnet.exe",
+      "commandLineArgs": "watch run",
+      "workingDirectory": "${ProjectDir}"
+    },
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,

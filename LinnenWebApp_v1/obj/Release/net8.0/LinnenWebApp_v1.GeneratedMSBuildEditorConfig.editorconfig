@@ -32,8 +32,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Customer/EditCustomer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdEN1c3RvbWVyLmNzaHRtbA==
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Customer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Customer/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Customer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Customer/Index.cshtml]
@@ -56,12 +68,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Login/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Login/LoginSuccess.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5TdWNjZXNzLmNzaHRtbA==
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Product/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Product/Index.cshtml]
@@ -100,12 +120,100 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Shipper/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Shipper/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Shipper/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Shipper/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Shipper/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hpcHBlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Student/EditStudent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFZGl0U3R1ZGVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Supplier/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Supplier/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Supplier/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Supplier/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Supplier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Territory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycml0b3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Territory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycml0b3J5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Territory/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycml0b3J5XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Territory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycml0b3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/Territory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVycml0b3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CodingProjects/C\#_Project/LinnenWebApp_v1/LinnenWebApp_v1/Views/_ViewImports.cshtml]
