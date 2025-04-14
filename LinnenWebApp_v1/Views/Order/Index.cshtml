@@ -1,0 +1,55 @@
+@model List<LinnenWebApp_v1.Models.Order>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Orders Index";
+}
+
+<h1>Orders</h1>
+<a asp-action="Create" class="btn btn-success mb-3">Create New Order</a>
+<table class="table table-striped table-bordered" style="width: 100%;">
+    <thead>
+        <tr>
+            <th>OrderID</th>
+            <th>Customer</th>
+            <th>Employee</th>
+            <th>Order Date</th>
+            <th>Required Date</th>
+            <th>Shipped Date</th>
+            <th>Ship Via</th>
+            <th>Freight</th>
+            <th>Ship Name</th>
+            <th>Ship Address</th>
+            <th>Ship City</th>
+            <th>Ship Region</th>
+            <th>Ship Postal Code</th>
+            <th>Ship Country</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderID</td>
+                <td>@order.CustomerCompanyName</td>
+                <td>@order.EmployeeFirstName @order.EmployeeLastName</td>
+                <td>@order.OrderDate.ToShortDateString()</td>
+                <td>@(order.RequiredDate?.ToShortDateString() ?? "N/A")</td>
+                <td>@(order.ShippedDate?.ToShortDateString() ?? "N/A")</td>
+                <td>@order.ShipperCompanyName</td>
+                <td>@order.Freight.ToString("C")</td>
+                <td>@order.ShipName</td>
+                <td>@order.ShipAddress</td>
+                <td>@order.ShipCity</td>
+                <td>@order.ShipRegion</td>
+                <td>@order.ShipPostalCode</td>
+                <td>@order.ShipCountry</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@order.OrderID" class="btn btn-primary">Edit</a>
+                    <a asp-action="Details" asp-route-id="@order.OrderID" class="btn btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@order.OrderID" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

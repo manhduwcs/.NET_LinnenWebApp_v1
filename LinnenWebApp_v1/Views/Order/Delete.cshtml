@@ -1,0 +1,32 @@
+@model LinnenWebApp_v1.Models.Order
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Delete Order";
+}
+
+<h1>Delete Order</h1>
+
+<div>
+    <h4>Are you sure you want to delete this order?</h4>
+    <div>
+        <strong>Customer:</strong> @Model.CustomerCompanyName<br />
+        <strong>Employee:</strong> @Model.EmployeeFirstName @Model.EmployeeLastName<br />
+        <strong>Order Date:</strong> @Model.OrderDate.ToShortDateString()<br />
+        <strong>Required Date:</strong> @(Model.RequiredDate?.ToShortDateString() ?? "N/A")<br />
+        <strong>Shipped Date:</strong> @(Model.ShippedDate?.ToShortDateString() ?? "N/A")<br />
+        <strong>Ship Via:</strong> @Model.ShipperCompanyName<br />
+        <strong>Freight:</strong> @Model.Freight.ToString("C")<br />
+        <strong>Ship Name:</strong> @Model.ShipName<br />
+        <strong>Ship Address:</strong> @Model.ShipAddress<br />
+        <strong>Ship City:</strong> @Model.ShipCity<br />
+        <strong>Ship Region:</strong> @Model.ShipRegion<br />
+        <strong>Ship Postal Code:</strong> @Model.ShipPostalCode<br />
+        <strong>Ship Country:</strong> @Model.ShipCountry<br />
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="OrderID" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

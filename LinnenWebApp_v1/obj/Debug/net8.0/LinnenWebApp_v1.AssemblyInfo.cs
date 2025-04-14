@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinnenWebApp_v1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b139388d5f5ecc04d8ddb979b2f18ac636121111")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5ed9e057f584793ef086362f6ac0718d28fe12f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinnenWebApp_v1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinnenWebApp_v1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,8 @@
 
         public string LastName { get; set; }  // nvarchar(20)
 
+        public string? FullName {get;set;}
+
         public string Title { get; set; }  // nvarchar(25), nullable
 
         public string TitleOfCourtesy { get; set; }  // nvarchar(25), nullable

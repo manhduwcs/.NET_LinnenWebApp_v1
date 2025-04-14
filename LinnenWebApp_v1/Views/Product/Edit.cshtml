@@ -1,4 +1,4 @@
-@model Product
+@model LinnenWebApp_v1.Models.Product
 
 @{
     ViewData["Title"] = "Edit Product";
@@ -19,6 +19,7 @@
             <input asp-for="ProductName" class="form-control" />
             <span asp-validation-for="ProductName" class="text-danger"></span> <!-- Validation for ProductName -->
         </div>
+
 
         <div class="mb-3">
             <label asp-for="SupplierID" class="form-label">Supplier's CompanyName</label>

@@ -1,0 +1,79 @@
+@model LinnenWebApp_v1.Models.Order
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Edit Order";
+}
+
+<h1>Edit Order</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="OrderID" />
+    
+    <div class="form-group">
+        <label asp-for="CustomerID"></label>
+        <select asp-for="CustomerID" class="form-control" asp-items="@(new SelectList(ViewBag.Customers, "CustomerID", "ContactName"))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EmployeeID"></label>
+        <select asp-for="EmployeeID" class="form-control" asp-items="@(new SelectList(ViewBag.Employees, "EmployeeID", "FullName", Model.EmployeeID))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OrderDate"></label>
+        <input asp-for="OrderDate" class="form-control" type="date" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RequiredDate"></label>
+        <input asp-for="RequiredDate" class="form-control" type="date" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShippedDate"></label>
+        <input asp-for="ShippedDate" class="form-control" type="date" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipVia"></label>
+        <select asp-for="ShipVia" class="form-control" asp-items="@(new SelectList(ViewBag.Shippers, "ShipperID", "CompanyName"))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Freight"></label>
+        <input asp-for="Freight" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipName"></label>
+        <input asp-for="ShipName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipAddress"></label>
+        <input asp-for="ShipAddress" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipCity"></label>
+        <input asp-for="ShipCity" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipRegion"></label>
+        <input asp-for="ShipRegion" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipPostalCode"></label>
+        <input asp-for="ShipPostalCode" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShipCountry"></label>
+        <input asp-for="ShipCountry" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-warning">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

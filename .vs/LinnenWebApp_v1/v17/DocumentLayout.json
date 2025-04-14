@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BEB6B32E-DC3B-42F9-8871-68E9859A08EE}|LinnenWebApp_v1\\LinnenWebApp_v1.csproj|d:\\codingprojects\\c#_project\\linnenwebapp_v1\\linnenwebapp_v1\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB6B32E-DC3B-42F9-8871-68E9859A08EE}|LinnenWebApp_v1\\LinnenWebApp_v1.csproj|solutionrelative:linnenwebapp_v1\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB6B32E-DC3B-42F9-8871-68E9859A08EE}|LinnenWebApp_v1\\LinnenWebApp_v1.csproj|d:\\codingprojects\\c#_project\\linnenwebapp_v1\\linnenwebapp_v1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB6B32E-DC3B-42F9-8871-68E9859A08EE}|LinnenWebApp_v1\\LinnenWebApp_v1.csproj|solutionrelative:linnenwebapp_v1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BEB6B32E-DC3B-42F9-8871-68E9859A08EE}|LinnenWebApp_v1\\LinnenWebApp_v1.csproj|d:\\codingprojects\\c#_project\\linnenwebapp_v1\\linnenwebapp_v1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BEB6B32E-DC3B-42F9-8871-68E9859A08EE}|LinnenWebApp_v1\\LinnenWebApp_v1.csproj|solutionrelative:linnenwebapp_v1\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -152,7 +160,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "RegionController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\RegionController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\RegionController.cs",
@@ -161,19 +169,33 @@
               "ViewState": "AgIAAOoAAAAAAAAAAAAgwPIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T13:57:38.217Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "LinnenWebApp_v1\\Models\\Category.cs",
-              "ToolTip": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Category.cs",
-              "RelativeToolTip": "LinnenWebApp_v1\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Title": "OrderDetailController.cs",
+              "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\OrderDetailController.cs",
+              "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\OrderDetailController.cs",
+              "ToolTip": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\OrderDetailController.cs",
+              "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\OrderDetailController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T12:14:54.508Z",
+              "WhenOpened": "2025-04-11T13:06:55.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T13:06:29.852Z",
               "EditorCaption": ""
             },
             {
@@ -182,7 +204,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "LinnenWebApp_v1\\Models\\Category.cs",
+              "ToolTip": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Category.cs",
+              "RelativeToolTip": "LinnenWebApp_v1\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T12:14:54.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\ProductController.cs",
@@ -195,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Program.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Program.cs",
@@ -208,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "TerritoryController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\TerritoryController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\TerritoryController.cs",
@@ -216,11 +251,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\TerritoryController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T03:37:07.527Z"
+              "WhenOpened": "2025-04-09T03:37:07.527Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "D:\\AppData\\Programs\\Microsoft\\VisualStudioCommunity\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Programs\\Microsoft\\VisualStudioCommunity\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -228,11 +264,12 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Programs\\Microsoft\\VisualStudioCommunity\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAAUTAAAAAAAAAAAhwBwTAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-04-07T15:35:33.996Z"
+              "WhenOpened": "2025-04-07T15:35:33.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\User\\Index.cshtml",
@@ -240,11 +277,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\User\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-07T13:23:16.838Z"
+              "WhenOpened": "2025-04-07T13:23:16.838Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\User.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Models\\User.cs",
@@ -252,11 +290,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:22:20.861Z"
+              "WhenOpened": "2025-04-07T13:22:20.861Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\UserController.cs",
@@ -264,11 +303,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\UserController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAADwvyEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:22:09.502Z"
+              "WhenOpened": "2025-04-07T13:22:09.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Supplier\\Delete.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Supplier\\Delete.cshtml",
@@ -276,11 +316,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Supplier\\Delete.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAIAxwBsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:51:00.475Z"
+              "WhenOpened": "2025-04-02T12:51:00.475Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Supplier\\Edit.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Supplier\\Edit.cshtml",
@@ -288,11 +329,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Supplier\\Edit.cshtml",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAEsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:50:24.958Z"
+              "WhenOpened": "2025-04-02T12:50:24.958Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Supplier\\Create.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Supplier\\Create.cshtml",
@@ -300,11 +342,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Supplier\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:49:57.648Z"
+              "WhenOpened": "2025-04-02T12:49:57.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Supplier\\Details.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Supplier\\Details.cshtml",
@@ -312,11 +355,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Supplier\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:49:21.31Z"
+              "WhenOpened": "2025-04-02T12:49:21.31Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "SupplierController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\SupplierController.cs",
@@ -324,11 +368,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\SupplierController.cs",
               "ViewState": "AgIAAP8AAAAAAAAAAAAowAkBAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:47:30.291Z"
+              "WhenOpened": "2025-04-02T12:47:30.291Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Supplier.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Supplier.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Models\\Supplier.cs",
@@ -336,11 +381,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Models\\Supplier.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAzwAkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:44:18.287Z"
+              "WhenOpened": "2025-04-02T12:44:18.287Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Supplier\\Index.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Supplier\\Index.cshtml",
@@ -348,11 +394,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Supplier\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T12:48:21.279Z"
+              "WhenOpened": "2025-04-02T12:48:21.279Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\CustomerController.cs",
@@ -360,11 +407,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\CustomerController.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAwwGIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:24:05.012Z"
+              "WhenOpened": "2025-04-02T10:24:05.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Customer\\Delete.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Customer\\Delete.cshtml",
@@ -372,11 +420,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Customer\\Delete.cshtml",
               "ViewState": "AgIAACkAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:28:16.513Z"
+              "WhenOpened": "2025-04-02T10:28:16.513Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Customer\\Create.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Customer\\Create.cshtml",
@@ -384,11 +433,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Customer\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:27:28.346Z"
+              "WhenOpened": "2025-04-02T10:27:28.346Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Customer\\Index.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Customer\\Index.cshtml",
@@ -396,11 +446,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Customer\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:26:49.72Z"
+              "WhenOpened": "2025-04-02T10:26:49.72Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Customer\\Edit.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Customer\\Edit.cshtml",
@@ -408,11 +459,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Customer\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:26:00.011Z"
+              "WhenOpened": "2025-04-02T10:26:00.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Customer\\Details.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Customer\\Details.cshtml",
@@ -420,11 +472,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Customer\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T10:25:37.487Z"
+              "WhenOpened": "2025-04-02T10:25:37.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Models\\Customer.cs",
@@ -432,11 +485,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Models\\Customer.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAowA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:23:35.199Z"
+              "WhenOpened": "2025-04-02T10:23:35.199Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Shipper\\Delete.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Shipper\\Delete.cshtml",
@@ -444,11 +498,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Shipper\\Delete.cshtml",
               "ViewState": "AgIAADQAAAAAAAAAAAAAADUAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T09:35:53.902Z"
+              "WhenOpened": "2025-04-02T09:35:53.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Shipper\\Edit.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Shipper\\Edit.cshtml",
@@ -456,11 +511,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Shipper\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T09:35:28.284Z"
+              "WhenOpened": "2025-04-02T09:35:28.284Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Shipper\\Create.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Shipper\\Create.cshtml",
@@ -468,11 +524,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Shipper\\Create.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T09:34:36.627Z"
+              "WhenOpened": "2025-04-02T09:34:36.627Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Shipper\\Index.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Shipper\\Index.cshtml",
@@ -480,11 +537,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Shipper\\Index.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAIAywDIAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T09:20:06.556Z"
+              "WhenOpened": "2025-04-02T09:20:06.556Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "ShipperController.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Controllers\\ShipperController.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Controllers\\ShipperController.cs",
@@ -492,11 +550,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Controllers\\ShipperController.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAADwv1sAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T09:18:18.737Z"
+              "WhenOpened": "2025-04-02T09:18:18.737Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Shipper\\Details.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Shipper\\Details.cshtml",
@@ -504,11 +563,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Shipper\\Details.cshtml",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T09:32:28.251Z"
+              "WhenOpened": "2025-04-02T09:32:28.251Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Shipper.cs",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Models\\Shipper.cs",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Models\\Shipper.cs",
@@ -516,11 +576,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Models\\Shipper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T09:18:40.127Z"
+              "WhenOpened": "2025-04-02T09:18:40.127Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Region\\Delete.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Region\\Delete.cshtml",
@@ -528,11 +589,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Region\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T14:31:02.754Z"
+              "WhenOpened": "2025-03-31T14:31:02.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Region\\Edit.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Region\\Edit.cshtml",
@@ -540,11 +602,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Region\\Edit.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwCEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T14:30:31.811Z"
+              "WhenOpened": "2025-03-31T14:30:31.811Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Region\\Create.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Region\\Create.cshtml",
@@ -552,11 +615,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Region\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T14:29:55.601Z"
+              "WhenOpened": "2025-03-31T14:29:55.601Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\CodingProjects\\C#_Project\\LinnenWebApp_v1\\LinnenWebApp_v1\\Views\\Region\\Details.cshtml",
               "RelativeDocumentMoniker": "LinnenWebApp_v1\\Views\\Region\\Details.cshtml",
@@ -564,11 +628,12 @@
               "RelativeToolTip": "LinnenWebApp_v1\\Views\\Region\\Details.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T14:29:13.858Z"
+              "WhenOpened": "2025-03-31T14:29:13.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AddressBinder.cs",
               "DocumentMoniker": "C:\\Users\\messi\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs",
               "ToolTip": "C:\\Users\\messi\\AppData\\Local\\Temp\\.vsdbgsrc\\44aa595dc2a1078aa662bebf92f46ec0aa83d37961bfc5ec1f12f1b995219153\\AddressBinder.cs [Read Only]",

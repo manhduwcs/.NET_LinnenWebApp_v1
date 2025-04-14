@@ -2,6 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+@{
+    if(UserController.loggedInUser.UserID == -1){
+        <script>
+            window.location.href = '@Url.Action("Login","User")'
+        </script>
+    }
+}
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +18,29 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LinnenWebApp_v1.styles.css" asp-append-version="true" />
 </head>
+
+<style>
+    .list-unstyled {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        /* Remove bullets */
+    }
+
+    .border-danger {
+        border: 2px solid red;
+        /* Red border for Logout */
+        border-radius: 5px;
+        /* Rounded corners */
+        text-decoration: none;
+        /* Remove underline */
+    }
+
+    .border-danger:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+        /* Light red on hover */
+    }
+</style>
 
 <body>
     <header>
@@ -28,7 +59,11 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
                         </li>
                         <li class="nav-item"></li>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Product"
+                            asp-action="Index">Products</a>
+                        </li>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Order"
+                            asp-action="Index">Orders</a>
                         </li>
                         @* <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -50,28 +85,40 @@
                                 asp-action="Index">Supplier</a>
                         </li>
                         <li class="nav-item"></li>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Territory"
-                                asp-action="Index">Territory</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Territory"
+                            asp-action="Index">Territory</a>
                         </li>
-                        <ul class="ms-auto d-sm-inline-flex ">
+                        <ul class="ms-auto d-sm-inline-flex list-unstyled align-items-center">
                             @{
                                 if (UserController.loggedInUser.UserID != -1)
                                 {
-                                    <li class="nav-item mr-3">Welcome, @UserController.loggedInUser.Username</li>
-                                    <li class="nav-item"><a class="text-danger" asp-controller="User" asp-action="Logout">Logout</a></li>
-                                }
-                                else{
-                                    <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                                    var welcomeText = "Welcome, " + UserController.loggedInUser.Username;
+                                    <li class="nav-item px-3 d-flex align-items-center">
+                                        @foreach (char c in welcomeText)
+                                        {
+                                            var color = $"#{new Random().Next(0x1000000):X6}"; // Generate random color
+                                                                                               <span style="color:@color">@c</span>
+                                        }
                                     </li>
-
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="User"
-                                            asp-action="Register">Register</a>
+                                        <a class="text-danger border border-danger p-1 d-flex align-items-center justify-content-center"
+                                            asp-controller="User" asp-action="Logout">Logout</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark d-flex align-items-center justify-content-center"
+                                            asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark d-flex align-items-center justify-content-center"
+                                            asp-area="" asp-controller="User" asp-action="Register">Register</a>
                                     </li>
                                 }
                             }
                         </ul>
+
                     </ul>
                 </div>
             </div>
@@ -85,7 +132,8 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - LinnenWebApp_v1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - LinnenWebApp_v1 - <a asp-area="" asp-controller="User" asp-action="Index">Start Modifying your
+                Users here</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

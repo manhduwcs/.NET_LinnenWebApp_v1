@@ -10,6 +10,7 @@ namespace LinnenWebApp_v1.Models
 
         [Required(ErrorMessage = "Username is required.")]
         [StringLength(150, ErrorMessage = "Username must not exceed 150 characters.")]
+        [RegularExpression(@"^\S*$", ErrorMessage = "Username cannot contain whitespace.")]
         public string Username { get; set; }
 
         [Required(ErrorMessage = "Password is required.")]

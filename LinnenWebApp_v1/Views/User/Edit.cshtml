@@ -25,20 +25,13 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="mb-3">
+                <label asp-for="EmployeeID" class="form-label"></label>
                 @{
-                    if (Model.EmployeeID != -1)
-                    {
-                        <label asp-for="EmployeeID" class="form-label"></label>
+                    if(Model.EmployeeID != -1){
                         <input asp-for="EmployeeID" class="form-control" readonly value=@Model.EmployeeID />
-                        <span asp-validation-for="EmployeeID" class="text-danger"></span>
-
                     }
-                    else
-                    {
-                        <label asp-for="EmployeeID" class="form-label"></label>
+                    else{
                         <input asp-for="EmployeeID" class="form-control" readonly value="N/A" />
-                        <span asp-validation-for="EmployeeID" class="text-danger"></span>
-
                     }
                 }
                 <span asp-validation-for="EmployeeID" class="text-danger"></span>

@@ -1,0 +1,66 @@
+@model LinnenWebApp_v1.Models.Order
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Order Details";
+}
+
+<h1>Order Details</h1>
+
+<div class="table-responsive">
+    <table class="table table-bordered" style="width: 100%;">
+        <tr>
+            <th>Customer</th>
+            <td>@Model.CustomerCompanyName</td>
+        </tr>
+        <tr>
+            <th>Employee</th>
+            <td>@Model.EmployeeFirstName @Model.EmployeeLastName</td>
+        </tr>
+        <tr>
+            <th>Order Date</th>
+            <td>@Model.OrderDate.ToShortDateString()</td>
+        </tr>
+        <tr>
+            <th>Required Date</th>
+            <td>@(Model.RequiredDate?.ToShortDateString() ?? "N/A")</td>
+        </tr>
+        <tr>
+            <th>Shipped Date</th>
+            <td>@(Model.ShippedDate?.ToShortDateString() ?? "N/A")</td>
+        </tr>
+        <tr>
+            <th>Ship Via</th>
+            <td>@Model.ShipperCompanyName</td>
+        </tr>
+        <tr>
+            <th>Freight</th>
+            <td>@Model.Freight.ToString("C")</td>
+        </tr>
+        <tr>
+            <th>Ship Name</th>
+            <td>@Model.ShipName</td>
+        </tr>
+        <tr>
+            <th>Ship Address</th>
+            <td>@Model.ShipAddress</td>
+        </tr>
+        <tr>
+            <th>Ship City</th>
+            <td>@Model.ShipCity</td>
+        </tr>
+        <tr>
+            <th>Ship Region</th>
+            <td>@Model.ShipRegion</td>
+        </tr>
+        <tr>
+            <th>Ship Postal Code</th>
+            <td>@Model.ShipPostalCode</td>
+        </tr>
+        <tr>
+            <th>Ship Country</th>
+            <td>@Model.ShipCountry</td>
+        </tr>
+    </table>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

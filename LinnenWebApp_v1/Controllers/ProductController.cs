@@ -44,12 +44,12 @@ public class ProductController : Controller
     {
         try
         {
-            if (!ModelState.IsValid)
-            {
-                ViewBag.Suppliers = GetSupplierChoices();
-                ViewBag.Categories = GetCategoryChoices();
-                return View(product);
-            }
+            // if (!ModelState.IsValid)
+            // {
+            //     ViewBag.Suppliers = GetSupplierChoices();
+            //     ViewBag.Categories = GetCategoryChoices();
+            //     return View(product);
+            // }
 
             string productName = form["ProductName"];
             int supplierID = int.Parse(form["SupplierID"]);
@@ -112,13 +112,14 @@ public class ProductController : Controller
         Console.WriteLine("Edit Product ID = " + prID);
         try
         {
-            if (!ModelState.IsValid)
-            {
-                Console.WriteLine("Run to this line : Invalid model state ");
-                ViewBag.Suppliers = GetSupplierChoices();
-                ViewBag.Categories = GetCategoryChoices();
-                return View(product);
-            }
+            // We can still validate directly in the form without using IsValid check
+            // if (!ModelState.IsValid)
+            // {
+            //     Console.WriteLine("Run to this line : Invalid model state ");
+            //     ViewBag.Suppliers = GetSupplierChoices();
+            //     ViewBag.Categories = GetCategoryChoices();
+            //     return View(product);
+            // }
 
             string productName = form["ProductName"];
             int supplierID = int.Parse(form["SupplierID"]);

@@ -1,8 +1,12 @@
-﻿namespace LinnenWebApp_v1.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace LinnenWebApp_v1.Models
 {
     public class Supplier
     {
         public int SupplierID { get; set; }
+        [Required(ErrorMessage = "Company Name is required.")]
+        [StringLength(40, ErrorMessage = "Company Name cannot be longer than 40 characters.")]
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
         public string ContactTitle { get; set; }
